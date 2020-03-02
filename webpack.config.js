@@ -7,5 +7,13 @@ module.exports = {
     path: path.resolve(__dirname, "app")
   },
   mode: "development",
-  watch: true
+  watch: true,
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ]
+  }
 };
