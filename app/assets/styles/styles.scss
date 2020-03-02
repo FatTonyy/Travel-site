@@ -1,5 +1,5 @@
-$body-color: red;
-
-body {
-  color: $body-color;
-}
+@import "scss/variables";
+@import "scss/large-hero";
+@import "scss/btn";
+@import "scss/global";
+@import "../../../node_modules/normalize.css/normalize.css";
