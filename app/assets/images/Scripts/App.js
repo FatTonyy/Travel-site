@@ -1,1 +1,1 @@
-alert("hello this is Mr-Blankson");
+import "../../styles/styles.scss";
