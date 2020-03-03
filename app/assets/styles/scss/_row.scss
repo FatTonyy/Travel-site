@@ -20,4 +20,13 @@
   &--gutters > div {
     padding-right: 65px;
   }
+
+  @include atLarge {
+    &__medium-4--larger {
+      width: 37%;
+    }
+    &__medium-8--smaller {
+      width: 63%;
+    }
+  }
 }
