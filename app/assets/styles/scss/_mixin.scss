@@ -15,3 +15,12 @@
     @content;
   }
 }
+
+@mixin clearFix {
+  // float-clear
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
