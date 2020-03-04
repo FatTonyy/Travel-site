@@ -21,6 +21,14 @@
     padding-right: 65px;
   }
 
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  @include atMedium {
+    margin-bottom: 0;
+  }
+
   @include atLarge {
     &__medium-4--larger {
       width: 37%;
