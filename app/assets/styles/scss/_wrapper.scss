@@ -23,4 +23,25 @@
   @include atSmall {
     margin-bottom: 3.875rem;
   }
+
+  // wrapper rule for testimonial
+  &--no-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include atMedium {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  &--no-padding-until-large {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include atLarge {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
 }
