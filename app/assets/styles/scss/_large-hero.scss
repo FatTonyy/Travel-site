@@ -8,6 +8,7 @@
 
   &__text-content {
     position: absolute;
+    padding-top: 60px;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
@@ -47,7 +48,7 @@
     margin-right: auto;
 
     @include atSmall {
-      font-size: 1.8rem;
+      font-size: 1.875rem;
     }
   }
 }
