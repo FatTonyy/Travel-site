@@ -37,4 +37,18 @@
       width: 63%;
     }
   }
+
+  // feature section
+  &__medium-6 {
+    float: left;
+    width: 50%;
+  }
+
+  &--gutters-large {
+    margin-right: -100px;
+  }
+
+  &--gutters-large > div {
+    padding-right: 100px;
+  }
 }
