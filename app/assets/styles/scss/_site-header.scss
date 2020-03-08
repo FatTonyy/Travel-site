@@ -4,12 +4,21 @@
   z-index: 2;
   width: 100%;
   height: 58px;
+  transition: background-color 0.3s ease-out;
+
+  &--is-expanded {
+    background-color: rgba($color: $mainBlue, $alpha: 0.55);
+    height: 14rem;
+  }
 
   @include atMedium {
     background-color: rgba($mainBlue, 0.3);
   }
+
   &__btn-container {
-    float: right;
+    @include atMedium {
+      float: right;
+    }
   }
 
   &__logo {
@@ -28,9 +37,25 @@
   }
 
   &__menu-content {
-    display: none;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+    position: relative;
+    z-index: -10;
+    padding-top: 90px;
+    text-align: center;
+
     @include atMedium {
-      display: block;
+      opacity: 1;
+      z-index: 1;
+      padding-top: 0;
+      transform: scale(1);
+    }
+    // making hamburger-menu-content-visible
+    &--is-visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
     }
   }
 
@@ -40,6 +65,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index: 20;
     background-color: #fff;
 
     @include atMedium {
