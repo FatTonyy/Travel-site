@@ -4,12 +4,21 @@
   z-index: 2;
   width: 100%;
   height: 58px;
+  transition: background-color 0.3s ease-out;
+
+  &--is-expanded {
+    background-color: rgba($color: $mainBlue, $alpha: 0.55);
+    height: 14rem;
+  }
 
   @include atMedium {
     background-color: rgba($mainBlue, 0.3);
   }
+
   &__btn-container {
-    float: right;
+    @include atMedium {
+      float: right;
+    }
   }
 
   &__logo {
@@ -28,22 +37,86 @@
   }
 
   &__menu-content {
-    display: none;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+    position: relative;
+    z-index: -10;
+    padding-top: 90px;
+    text-align: center;
+
     @include atMedium {
-      display: block;
+      opacity: 1;
+      z-index: 1;
+      padding-top: 0;
+      transform: scale(1);
+    }
+    // making hamburger-menu-content-visible
+    &--is-visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
     }
   }
 
   &__menu-icon {
     width: 20px;
-    height: 20px;
+    height: 19px;
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #fff;
+    z-index: 20;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: transform 0.3s ease-out;
+    }
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 0.3s ease-out;
+      transform-origin: 0 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 100%;
+      transition: transform 0.3s ease-out;
+    }
 
     @include atMedium {
       display: none;
+    }
+  }
+
+  &__menu-icon--close-x {
+    &::before {
+      transform: rotate(45deg) scaleX(1.25);
+    }
+
+    .site-header__menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
     }
   }
 }
