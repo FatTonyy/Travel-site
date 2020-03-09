@@ -8,4 +8,9 @@ if (module.hot) {
 
 //? module imports from module folder
 import MobileMenu from "./modules/MobileMenu";
+import Reveal from "./modules/RevealOnScroll";
+
+new Reveal(document.querySelectorAll(".feature-item"), 75);
+new Reveal(document.querySelectorAll(".testimonial"), 60);
+
 let mobilemenu = new MobileMenu();
