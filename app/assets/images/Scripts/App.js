@@ -1,5 +1,6 @@
-//?below is for css configuration using webpack
+//?below is for css configuration using webpack and lazySizes
 import "../../styles/styles.scss";
+import "lazysizes";
 
 //? below is to make webpack read and refreshes if any changes is made
 if (module.hot) {
