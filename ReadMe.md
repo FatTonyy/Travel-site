@@ -1,6 +1,6 @@
 # Building A Travel-Site
 
-## TOOlS
+## TOOlS Used
 
 > **Webpack,SCSS,HTML and JavaScript**
 
