@@ -1,11 +1,15 @@
-# Building A Travel-Site
+# _Building A Travel-Site_ 🗺
 
-## TOOlS Used
 
 > **Webpack,SCSS,HTML and JavaScript**
 
 ![screenshot](/app/assets/images/Screenshot.png)
 
-### NPM
+### _SETUP_ 👷
 
->npm run dev to run on localhost:3000
+> + npm install
+> + npm run dev on localhost:3000
+
+### _LINK_ 🥂
+
+[link to deployed site](https://traveller-gh.netlify.app)
