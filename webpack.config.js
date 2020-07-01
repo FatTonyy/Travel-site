@@ -8,7 +8,7 @@ const fse = require("fs-extra");
 // settings our own plugin
 class RunAfterCompile {
 	apply(compiler) {
-		compiler.hooks.done.tap("copy images", function () {
+		compiler.hooks.done.tap("Copy images", function () {
 			fse.copySync("./app/assets/images", "./dist/assets/images");
 		});
 	}
@@ -16,7 +16,7 @@ class RunAfterCompile {
 
 let cssConfig = {
 	test: /\.s[ac]ss$/i,
-	use: ["css-loader", "sass-loader"],
+	use: ["css-loader?url=false", "sass-loader"],
 };
 
 let pages = fse
@@ -48,7 +48,7 @@ if (currentTask === "dev") {
 
 	config.devServer = {
 		before: function (app, server) {
-			server._watch("./app/**/*html");
+			server._watch("./app/**/*.html");
 		},
 		contentBase: path.join(__dirname, "app"),
 		hot: true,
