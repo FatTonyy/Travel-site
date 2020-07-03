@@ -7,7 +7,7 @@
 
 ### _SETUP_ 👷
 
-> + npm install
+> + yarn / yarn install
 > + npm run dev on localhost:3000
 
 ### _LINK_ 🥂
