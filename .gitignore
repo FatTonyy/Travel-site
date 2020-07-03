@@ -12,6 +12,7 @@ dist/
 *.sass-cache
 node_modules/
 .tmp/
+.vscode/
 
 # OS or Editor folders
 .DS_Store
